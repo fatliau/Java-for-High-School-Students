@@ -4,15 +4,14 @@
 
 cmd/terminal: javac
 
-How to Set JAVA_HOME on Windows 10:
+How to Set JAVA_HOME on Windows 10:(reference: http://www.mkyong.com/java/how-to-set-java_home-on-windows-10/)
 1.Type ###code in the search box (beside the Windows start button), clicks View advanced system settings. 
 2.Select Advance tab, clicks Environment Variables
 3.In System variables, add a new JAVA_HOME variable and point it to the JDK installed folder.
 4.In System variables, find PATH, clicks edit and append this%JAVA_HOME%\bin to the end.
 5.Type javac :D
-reference: http://www.mkyong.com/java/how-to-set-java_home-on-windows-10/
-Control Panel -> Sys & Security -> Advanced Setting -> Environment Variables -> Sys Variable -> Path -> New -> Add jdk_1.8.x/bin/, Add jre_1.8.x/bin/
 
+Control Panel -> Sys & Security -> Advanced Setting -> Environment Variables -> Sys Variable -> Path -> New -> Add jdk_1.8.x/bin/, Add jre_1.8.x/bin/
 
 2.Basic structure for a java program
 
