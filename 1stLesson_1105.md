@@ -28,3 +28,7 @@ ex: make a function to calculate rectangle area
 5.Read data from console
 
 ex: type in and print out
+
+6.Text Book
+
+https://bittlife.com/books/Big%20Java%20(4th%20Edition).pdf
