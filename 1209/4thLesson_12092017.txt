@@ -1,0 +1,47 @@
+#Relational Operators
+>  Greater than>= Greater than or equal<  Less than<= Less than or equal== Equal!= Not equal
+
+#if
+if(){
+
+}
+else if(){
+
+}
+else{
+
+}
+
+#while
+while(){
+
+}
+
+#for
+for(int i=0;i<10;i++){
+
+}
+
+#P3.1 
+Write a BankAccountTester class whose main method constructs a bank account, deposits $1,000, withdraws $500, withdraws another $400, and then prints the remaining balance. Also print the expected result.
+
+#P3.2 
+Add a method	public void addInterest(double rate)to the BankAccount class that adds interest at the given rate. For example, after the statements	BankAccount momsSavings = new BankAccount(1000);	momsSavings.addInterest(10); // 10% interestthe balance in momsSavings is $1,100. Also supply a BankAccountTester class that prints the actual and expected balance.
+
+#P3.3 
+Write a class SavingsAccount that is similar to the BankAccount class, except that it has an added instance variable interest. Supply a constructor that sets both the initial balance and the interest rate. Supply a method addInterest (with no explicit parameter) that adds interest to the account. Write a SavingsAccountTester class that constructs a savings account with an initial balance of $1,000 and an interest rate of 10%. Then apply the addInterest method and print the resulting balance. Also compute the expected result by hand and print it.
+
+
+#P3.6 
+Implement a class Employee. An employee has a name (a string) and a salary (a double). Provide a constructor with two parameters	public Employee(String employeeName, double currentSalary)and methods	public String getName()	public double getSalary()	public void raiseSalary(double byPercent)These methods return the name and salary, and raise the employee’s salary by a certain percentage. Sample usage:	Employee harry = new Employee("Hacker, Harry", 50000);	harry.raiseSalary(10); // Harry gets a 10% raiseSupply an EmployeeTester class that tests all methods.
+
+
+#P3.8 
+Implement a class Student. For the purpose of this exercise, a student has a name and a total quiz score. Supply an appropriate constructor and methods getName(), addQuiz(int score), getTotalScore(), and getAverageScore(). To compute the latter, you also need to store the number of quizzes that the student took. Supply a StudentTester class that tests all methods.
+
+#P5.12
+A year with 366 days is called a leap year. A year is a leap year if it is divisible by 4(for example, 1980). However, since the introduction of the Gregorian calendar on October 15, 1582, a year is not a leap year if it is divisible by 100 (for example,1900); however, it is a leap year if it is divisible by 400 (for example, 2000). Write a program that asks the user for a year and computes whether that year is a leap year.Implement a class Year with a predicate method boolean isLeapYear().
+
+#P5.15
+Enhance the BankAccount class of Chapter 3 by• Rejecting negative amounts in the deposit and withdraw methods• Rejecting withdrawals that would result in a negative balance
+
