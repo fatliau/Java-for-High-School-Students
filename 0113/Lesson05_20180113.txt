@@ -1,0 +1,19 @@
+#Review:
+variable
+class
+function
+if
+while
+for
+
+#P5.3 
+Write a program that reads in three floating-point numbers and prints the three inputs in sorted order. For example:Please enter three numbers:492.5The inputs in sorted order are:2.549
+
+#P5.4 
+Write a program that translates a letter grade into a number grade. Letter grades are A B C D F, possibly followed by + or -. Their numeric values are 4, 3, 2, 1, and 0. There is no F+ or F-. A + increases the numeric value by 0.3, a - decreases it by 0.3. However, an A+ has the value 4.0. All other inputs have value –1.Enter a letter grade:B-
+Numeric value: 2.7.Use a class Grade with a method getNumericGrade.
+
+#P5.5
+Write a program that translates a number into the closest letter grade. For example, the number 2.8 (which might have been the average of several grades) would be converted to B-. Break ties in favor of the better grade; for example, 2.85 should be a B. Any value ≥ 4.15 should be an A+. Use a class Grade with a method getLetterGrade.
+
+
