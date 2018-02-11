@@ -1,0 +1,12 @@
+# 02102018
+
+# (Tic-Tac-Toe) 
+Create a class TicTacToe that will enable you to write a program to play Tic-Tac-Toe. The class contains a private 3-by-3 two-dimensional array. Use an enumeration to represent the value in each cell of the array. The enumeration’s constants should be named X, O and EMPTY (for a position that does not contain an X or an O). The constructor should initialize the board elements to EMPTY. Allow two human players. Wherever the first player moves, place an X in the specifiedsquare, and place an O wherever the second player moves. Each move must be to an empty square. After each move, determine whether the game has been won and whether it’s a draw.
+
+# (Find the smallest element) 
+Write a method that finds the smallest element in an array of double values using the following header:public static double min(double[] array) 
+Write a test program that prompts the user to enter ten numbers, invokes thismethod to return the minimum value, and displays the minimum value. Here is a sample run of the program:
+Enter ten numbers: 1.9 2.5 3.7 2 1.5 6 3 4 5 2The minimum number is: 1.5
+
+# (Find the index of the smallest element) 
+Write a method that returns the index of the smallest element in an array of integers. If the number of such elements is greater than 1, return the smallest index. Use the following header:public static int indexOfSmallestElement(double[] array)Write a test program that prompts the user to enter ten numbers, invokes this method to return the index of the smallest element, and displays the index.
