@@ -1,0 +1,7 @@
+# 02242018
+
+# slot machine
+
+# open and read file
+
+# basic algorithm: bubble sort, insertion sort
