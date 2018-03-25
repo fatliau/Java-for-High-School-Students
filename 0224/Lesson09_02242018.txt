@@ -5,3 +5,14 @@
 # open and read file
 
 # basic algorithm: bubble sort, insertion sort
+
+# review exercise:
+Bank account class:
+method:
+create(constructor)
+withdraw
+deposit
+transfer
+variable:
+balance
+name
