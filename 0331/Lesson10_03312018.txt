@@ -1,0 +1,16 @@
+# 03312018
+
+# extends
+extends means that you are creating a subclass of the class you are extending
+
+# keyword ‘protected’
+Visible to the package, the default. No modifiers are needed.
+Visible to the class only (private).
+Visible to the world (public).
+Visible to the package and all subclasses (protected).
+
+# savingAccount extends bankAccount
+
+# implement assign interest function
+
+# Graphical User Interface introduction: Swing(JFrame)
