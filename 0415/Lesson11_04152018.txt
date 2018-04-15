@@ -1,0 +1,72 @@
+R2.1 Explain the difference between an object and an object reference.
+
+A: Rectangle rect = new Rectangle(3,4);
+
+R2.2 Explain the difference between an object and an object variable.
+
+A: rect.length = 6;
+
+R2.3 Explain the difference between an object and a class.
+
+R2.4 Give the Java code for constructing an object of class Rectangle, and for declaring an
+object variable of class Rectangle.
+
+R2.5 Explain the difference between the = symbol in Java and in mathematics.
+
+R2.6 Give Java code for objects with the following descriptions:
+a. A rectangle with center (100, 100) and all side lengths equal to 50
+b. A string with the contents “Hello, Dave”
+Create objects, not object variables.
+
+A: Rectangle rect = new Rectangle(50,50,100,100);
+String str = new String(“Hello, Dave”);
+
+R2.7 Repeat Exercise R2.6, but now declare object variables that are initialized with the
+required objects.
+
+R2.8 Write a Java statement to initialize a variable square with a rectangle object whose
+top left corner is (10, 20) and whose sides all have length 40. Then write a statement
+that replaces square with a rectangle of the same size and top left corner (20, 20).
+
+A: Rectangle square = new Rectangle(40,40,10,20);
+square = new Rectangle(40,40,20,20);
+
+R2.9 Write Java statements that initialize two variables square1 and square2 to refer to the
+same square with center (20, 20) and side length 40.
+
+R2.10 Write Java statements that initialize a string message with "Hello" and then change it
+to "HELLO". Use the toUpperCase method.
+
+A:		String hello = new String("hello");
+		System.out.println(hello);
+		hello = hello.toUpperCase();
+		System.out.println(hello);
+
+
+R2.11 Write Java statements that initialize a string message with "Hello" and then change it
+to "hello". Use the replace method.
+
+R2.12 Find the errors in the following statements:
+a. Rectangle r = (5, 10, 15, 20);
+A: Rectangle r = new Rectangle(5, 10, 15, 20);
+
+b. double width = Rectangle(5, 10, 15, 20).getWidth();
+A: double width = new Rectangle(5, 10, 15, 20).getWidth();
+
+c. Rectangle r;
+r.translate(15, 25);
+A:		Rectangle r = new Rectangle(5,10,15,20);
+		r.translate(15, 25);
+
+d. r = new Rectangle();
+r.translate("far, far away!");
+
+R2.13 Name two accessor methods and two mutator methods of the Rectangle class.
+
+R2.14 Look into the API documentation of the Rectangle class and locate the method
+void add(int newx, int newy)
+Read through the method documentation. Then determine the result of the following
+statements:
+Rectangle box = new Rectangle(5, 10, 20, 30);
+box.add(0, 0);
+If you are not sure, write a small test program.
