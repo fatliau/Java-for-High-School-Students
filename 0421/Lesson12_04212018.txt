@@ -1,0 +1,135 @@
+R3.1 What is the interface of a class? How does it differ from the implementation of a
+class?
+A: Let’s implement a interface
+
+R3.2 What is encapsulation? Why is it useful?
+
+R3.3 Instance variables are a part of the hidden implementation of a class, but they aren’t
+actually hidden from programmers who have the source code of the class. Explain
+to what extent the private reserved word provides information hiding.
+A:”private” can be only accessed by the class itself
+
+R3.4 Consider a class Grade that represents a letter grade, such as A+ or B. Give two
+choices of instance variables that can be used for implementing the Grade class.
+
+R3.5 Consider a class Time that represents a point in time, such as 9 A.M. or 3:30 P.M. Give
+two different sets of instance variables that can be used for implementing the Time
+class.
+A: 
+public int hour;
+public int minute;
+
+R3.6 Suppose the implementor of the Time class of Exercise R3.5 changes from one implementation
+strategy to another, keeping the public interface unchanged. What do the
+programmers who use the Time class need to do?
+
+R3.7 You can read the value instance variable of the Counter class with the getValue accessor
+method. Should there be a setValue mutator method to change it? Explain why
+or why not.
+A:Depends on the modifier of the instance: public, or private
+
+R3.8 a. Show that the BankAccount(double initialBalance) constructor is not strictly necessary.
+That is, if we removed that constructor from the public interface, how
+could a programmer still obtain BankAccount objects with an arbitrary balance?
+b. Conversely, could we keep only the BankAccount(double initialBalance) constructor
+and remove the BankAccount() constructor?
+
+R3.9 Why does the BankAccount class not have a reset method?
+A: (Guess) Too powerful?
+
+R3.10 What happens in our implementation of the BankAccount class when more money is
+withdrawn from the account than the current balance?
+
+R3.11 What is the “this” reference? Why would you use it?
+A: Within an instance method or a constructor, this is a reference to the current object — the object whose method or constructor is being called.
+
+The most common reason for using the this keyword is because a field is shadowed by a method or constructor parameter.
+public class Point {
+    public int x = 0;
+    public int y = 0;
+        
+    //constructor
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+Using this with a Constructor
+
+From within a constructor, you can also use the this keyword to call another constructor in the same class. Doing so is called an explicit constructor invocation. Here's another Rectangle class, with a different implementation from the one in the Objects section.
+
+public class Rectangle {
+    private int x, y;
+    private int width, height;
+        
+    public Rectangle() {
+        this(0, 0, 1, 1);
+    }
+    public Rectangle(int width, int height) {
+        this(0, 0, width, height);
+    }
+    public Rectangle(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+    ...
+}
+
+R3.12 What does the following method do? Give an example of how you can call the
+method.
+public class BankAccount
+{
+public void mystery(BankAccount that, double amount)
+{
+this.balance = this.balance - amount;
+that.balance = that.balance + amount;
+}
+. . . // Other bank account methods
+}
+
+R3.13 Suppose you want to implement a class TimeDepositAccount. A time deposit account
+has a fixed interest rate that should be set in the constructor, together with the initial
+balance. Provide a method to get the current balance. Provide a method to add the
+earned interest to the account. This method should have no parameters because the
+interest rate is already known. It should have no return value because you already
+provided a method for obtaining the current balance. It is not possible to deposit
+additional funds into this account. Provide a withdraw method that removes the
+entire balance. Partial withdrawals are not allowed.
+A: Implementation in codes.
+
+R3.14 Consider the following implementation of a class Square:
+public class Square
+{
+private int sideLength;
+private int area; // Not a good idea
+public Square(int length)
+{
+sideLength = length;
+}
+public int getArea()
+{
+area = sideLength * sideLength;
+return area;
+}
+}
+Why is it not a good idea to introduce an instance variable for the area? Rewrite the
+class so that area is a local variable.
+
+R3.15 Consider the following implementation of a class Square:
+public class Square
+{
+private int sideLength;
+private int area;
+public Square(int initialLength)
+{
+sideLength = initialLength;
+area = sideLength * sideLength;
+}
+public int getArea() { return area; }
+public void grow() { sideLength = 2 * sideLength(); }
+}
+What error does this class have? How would you fix it?
+A: fix the change of the area when sideLength grows
