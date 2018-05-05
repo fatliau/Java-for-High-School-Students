@@ -1,0 +1,114 @@
+R4.1 Write the following mathematical expressions in Java.
+A:see codes
+
+R4.2 Write the following Java expressions in mathematical notation.
+a. dm = m * (Math.sqrt(1 + v / c) / (Math.sqrt(1 - v / c) - 1));
+b. volume = Math.PI * r * r * h;
+c. volume = 4 * Math.PI * Math.pow(r, 3) / 3;
+d. p = Math.atan2(z, Math.sqrt(x * x + y * y));
+
+R4.3 What is wrong with this version of the quadratic formula?
+x1 = (-b - Math.sqrt(b * b - 4 * a * c)) / 2 * a;
+x2 = (-b + Math.sqrt(b * b - 4 * a * c)) / 2 * a;
+A:Use parentheses
+
+R4.4 Give an example of integer overflow. Would the same example work correctly if
+you used floating-point?
+
+R4.5 Give an example of a floating-point roundoff error. Would the same example work
+correctly if you used integers and switched to a sufficiently small unit, such as cents
+instead of dollars, so that the values don’t have a fractional part?
+A:see codes from text book
+
+R4.6 Consider the following code:
+CashRegister register = new CashRegister();
+register.recordPurchase(19.93);
+register.enterPayment(20, 0, 0, 0, 0);
+System.out.print("Change: ");
+System.out.println(register.giveChange());
+The code segment prints the total as 0.07000000000000028. Explain why. Give a recommendation
+to improve the code so that users will not be confused.
+
+R4.7 Let n be an integer and x a floating-point number. Explain the difference between
+n = (int) x;
+and
+n = (int) Math.round(x);
+A:Same as R4.5
+
+R4.8 Let n be an integer and x a floating-point number. Explain the difference between
+n = (int) (x + 0.5);
+and
+n = (int) Math.round(x);
+For what values of x do they give the same result? For what values of x do they give
+different results?
+
+R4.9 Consider the vending machine implementation in How To 4.1 on page 146. What
+happens if the givePennyStamps method is invoked before the giveFirstClassStamps
+method?
+A:
+giveFirstClassStamps -> buy stamps cost44 cents
+givePennyStamps -> gives the change in penny (1-cent) stamps
+
+R4.10 Explain the differences between 2, 2.0, '2', "2", and "2.0".
+
+R4.11 Explain what each of the following two program segments computes:
+int x = 2;
+int y = x + x;
+and
+String s = "2";
+String t = s + s;
+A:Try it on Eclipse
+
+R4.12 True or false? (x is an int and s is a String)
+a. Integer.parseInt("" + x) is the same as x
+b. "" + Integer.parseInt(s) is the same as s
+c. s.substring(0, s.length()) is the same as s
+
+R4.13 How do you get the first character of a string? The last character? How do you
+remove the first character? The last character?
+
+R4.14 How do you get the last digit of an integer? The first digit? That is, if n is 23456, how
+do you find out that the first digit is 2 and the last digit is 6? Do not convert the
+number to a string. Hint: %, Math.log.
+
+R4.15 This chapter contains several recommendations regarding variables and constants
+that make programs easier to read and maintain. Summarize these recommendations.
+A:
+
+R4.16 What is a final variable? Can you declare a final variable without supplying its
+value? (Try it out.)
+
+R4.17 What are the values of the following expressions? In each line, assume that
+double x = 2.5;
+double y = -1.5;
+int m = 18;
+int n = 4;
+a. x + n * y - (x + n) * y
+b. m / n + m % n
+c. 5 * x - n / 5
+d. Math.sqrt(Math.sqrt(n))
+e. (int) Math.round(x)
+f. (int) Math.round(x) + (int) Math.round(y)
+g. 1 - (1 - (1 - (1 - (1 - n))))
+A:
+		double x = 2.5;
+		double y = -1.5;
+		int m = 18;
+		int n = 4;
+		System.out.println(x + n * y - (x + n) * y);
+		System.out.println(m / n + m % n);
+		System.out.println(5 * x - n / 5);
+		System.out.println(Math.sqrt(Math.sqrt(n)));
+		System.out.println((int) Math.round(x));
+		System.out.println((int) Math.round(x) + (int) Math.round(y));
+		System.out.println(1 - (1 - (1 - (1 - (1 - n)))));
+
+R4.18 What are the values of the following expressions? In each line, assume that
+int n = 4;
+String s = "Hello";
+String t = "World";
+a. s + t
+b. s + n
+c. n + t
+d. s.substring(1, n)
+e. s.length() + t.length()
