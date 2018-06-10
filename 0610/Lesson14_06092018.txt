@@ -1,0 +1,216 @@
+R5.1 What is the value of each variable after the if statement?
+a. int n = 1; int k = 2; int r = n; if (k < n) r = k;
+b. int n = 1; int k = 2; int r; if (n < k) r = k; else r = k + n;
+c. int n = 1; int k = 2; int r = k; if (r < k) n = r; else k = n;
+d. int n = 1; int k = 2; int r = 3; if (r < n + k) r = 2 * n; else k = 2 * r;
+A:
+a. n:1 k:2 r:2
+b. n:1 k:2 r:1
+c. n:1 k:1 r:2
+d. n:1 k:6 r:3
+
+R5.2 Find the errors in the following if statements.
+a. if (1 + x > Math.pow(x, Math.sqrt(2)) y = y + x;
+b. if (x = 1) y++; else if (x = 2) y = y + 2;
+c. int x = Integer.parseInt(input);
+if (x != null) y = y + x;
+
+R5.3 Find the error in the following if statement that is intended to select a language
+from a given country and state/province.
+language = "English";
+if (country.equals("Canada"))
+if (stateOrProvince.equals("Quebec")) language = "French";
+else if (country.equals("China"))
+language = "Chinese";
+A: See the Indentation in Eclipse
+
+R5.4 Find the errors in the following if statements.
+a. if (x && y == 0) { x = 1; y = 1; }
+b. if (1 <= x <= 10)
+System.out.println(x);
+c. if (!s.equals("nickels") || !s.equals("pennies")
+|| !s.equals("dimes") || !s.equals("quarters"))
+System.out.print("Input error!");
+d. if (input.equalsIgnoreCase("N") || "NO")
+return;
+
+R5.5 Explain the following terms, and give an example for each construct:
+a. Expression
+A syntactical construct that is made up of constants, variables, method calls, and operators combining them.
+b. Condition
+c. Statement
+A syntactical unit in a program. In Java a statement is either a simple statement, a compound statement, or a block.
+d. Simple statement
+A statement consisting of a single expression
+e. Compound statement
+A statement such as if or while that is made up of several parts such as a condition and a body.
+f. Block
+A group of statements bracketed by{}
+For example, (a * 2) is an expression. b + (a * 2); is a statement.
+if statement has two parts: a condition and a body. If the condition is true, the body of the statement is executed.
+
+R5.6 Explain the difference between an if statement with multiple else branches and
+nested if statements. Give an example for each.
+
+R5.7 Give an example for an if/else if/else statement where the order of the tests does
+not matter. Give an example where the order of the tests matters.
+A: In Eclipse
+
+R5.8 Of the following pairs of strings, which comes first in lexicographic order?
+a. "Tom", "Jerry"
+b. "Tom", "Tomato"
+c. "church", "Churchill"
+d. "car manufacturer", "carburetor"
+e. "Harry", "hairy"
+f. "C++", " Car"
+g. "Tom", "Tom"
+h. "Car", "Carl"
+i. "car", "bar"
+j. "101", "11"
+k. "1.01", "10.1"
+
+R5.9 Complete the following truth table by finding the truth values of the Boolean
+expressions for all combinations of the Boolean inputs p, q, and r.
+p q r (p && q) || !r !(p && (q || !r))
+T T T T                F
+T T F T                F
+T F T F                T
+T F F T                F
+F T T F                T
+F T F T                T
+F F T F                T
+F F F T                T
+
+R5.10 Each square on a chess board can be described by a letter and number, such as g5 in
+this example:
+The following pseudocode describes an algorithm that determines whether a square
+with a given letter and number is dark (black) or light (white).
+If the letter is an a, c, e, or g
+If the number is odd
+color = "black"
+Else
+color = "white"
+Else
+If the number is even
+color = "black"
+Else
+color = "white"
+Using the procedure in Productivity Hint 5.2 on page 192, trace this pseudocode
+with input g5.
+
+R5.11 Give a set of four test cases for the algorithm of Exercise R5.10 that covers all
+branches.
+A: See R5_10 in Eclipse
+
+R5.12 In a scheduling program, we want to check whether two appointments overlap. For
+simplicity, appointments start at a full hour, and we use military time (with hours 0–
+24). The following pseudocode describes an algorithm that determines whether the
+appointment with start time start1 and end time end1 overlaps with the appointment
+with start time start2 and end time end2.
+If start1 > start2
+s = start1
+Else
+s = start2
+If end1 < end2
+e = endl
+Else
+e = end2
+If s < e
+The appointments overlap.
+Else
+The appointments don’t overlap.
+Trace this algorithm with an appointment from 10–12 and one from 11–13, then
+with an appointment from 10–11 and one from 12–13.
+
+R5.13 Write pseudocode for a program that prompts the user for a month and day and
+prints out whether it is one of the following four holidays:
+• New Year’s Day (January 1)
+• Independence Day (July 4)
+• Veterans Day (November 11)
+• Christmas Day (December 25)
+A: Eclipse
+
+R5.14 True or false? A && B is the same as B && A for any Boolean conditions A and B.
+
+R5.15 Explain the difference between
+s = 0;
+if (x > 0) s++;
+if (y > 0) s++;
+and
+s = 0;
+if (x > 0) s++;
+else if (y > 0) s++;
+
+R5.16 Use de Morgan’s law to simplify the following Boolean expressions.
+a. !(x > 0 && y > 0)
+b. !(x != 0 || y != 0)
+c. !(country.equals("US") && !state.equals("HI")
+&& !state.equals("AK"))
+d. !(x % 4 != 0 || !(x % 100 == 0 && x % 400 == 0))
+
+R5.17 Make up another Java code example that shows the dangling else problem, using
+the following statement: A student with a GPA of at least 1.5, but less than 2, is on
+probation; with less than 1.5, the student is failing.
+A: see p.191 and Eclipse
+
+R5.18 Explain the difference between the == operator and the equals method when comparing
+strings.
+
+R5.19 Explain the difference between the tests
+r == s
+and
+r.equals(s)
+where both r and s are of type Rectangle.
+A: p.181
+If you compare two object references with the == operator, you test whether the references
+refer to the same object.
+use the equals method to test whether two rectangles have the same contents
+
+R5.20 What is wrong with this test to see whether r is null? What happens when this code
+runs?
+Rectangle r;
+. . .
+if (r.equals(null))
+r = new Rectangle(5, 10, 20, 30);
+
+R5.21 Explain how the lexicographic ordering of strings differs from the ordering of
+words in a dictionary or telephone book. Hint: Consider strings, such as IBM,
+wiley.com, Century 21, While-U-Wait, and 7-11.
+A: p.179
+Java is case sensitive and sorts characters by putting numbers first, then uppercase characters, then lowercase characters. For example, 1 comes before B, which comes before a. The space character comes before all other characters.
+
+R5.22 Write Java code to test whether two objects of type Line2D.Double represent the same
+line when displayed on the graphics screen. Do not use a.equals(b).
+Line2D.Double a;
+Line2D.Double b;
+if (your condition goes here)
+g2.drawString("They look the same!", x, y);
+Hint: If p and q are points, then Line2D.Double(p, q) and Line2D.Double(q, p) look the
+same.
+
+R5.23 Explain why it is more difficult to compare floating-point numbers than integers.
+Write Java code to test whether an integer n equals 10 and whether a floating-point
+number x is approximately equal to 10.
+A: p.177
+
+R5.24 Consider the following test to see whether a point falls inside a rectangle.
+Point2D.Double p = . . .
+Rectangle r = . . .
+boolean xInside = false;
+if (r.getX() <= p.getX() && p.getX() <= r.getX() + r.getWidth())
+xInside = true;
+boolean yInside = false;
+if (r.getY() <= p.getY() && p.getY() <= r.getY() + r.getHeight())
+yInside = true;
+if (xInside && yInside)
+g2.drawString("p is inside the rectangle.",
+p.getX(), p.getY());
+Rewrite this code to eliminate the explicit true and false values, by setting xInside
+and yInside to the values of Boolean expressions.
+
+R5.25 Give a set of test cases for the earthquake program in Section 5.3.1. Ensure coverage
+of all branches.
+A: p.185
+
+R5.26 Give an example of a boundary test case for the earthquake program in Section
+5.3.1. What result do you expect?
